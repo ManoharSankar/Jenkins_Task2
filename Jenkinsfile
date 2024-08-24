@@ -31,7 +31,7 @@ pipeline {
                 - **Build URL**: ${env.BUILD_URL}
 
                 Please check the details in Jenkins.
-                """
+                """,
 		attachLog: true
             )
         }
@@ -51,7 +51,7 @@ pipeline {
                 - **Build URL**: ${env.BUILD_URL}
 
                 Please check the details in Jenkins.
-                """
+                """,
 		attachLog: true
             )
         }
