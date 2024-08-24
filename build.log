@@ -1,0 +1,70 @@
+Started by GitHub push by ManoharSankar
+Obtained Jenkinsfile from git https://github.com/ManoharSankar/Jenkins_Task2.git
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/lib/jenkins/workspace/Jenkins_Task2_pipeline
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/Jenkins_Task2_pipeline/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/ManoharSankar/Jenkins_Task2.git # timeout=10
+Fetching upstream changes from https://github.com/ManoharSankar/Jenkins_Task2.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.43.0'
+ > git fetch --tags --force --progress -- https://github.com/ManoharSankar/Jenkins_Task2.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 9643c4584f7d1a008f42a6bedf6c832fb4e2f7ef (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 9643c4584f7d1a008f42a6bedf6c832fb4e2f7ef # timeout=10
+Commit message: "Modified JenkinsFile"
+ > git rev-list --no-walk 80c12612aabafdbb55f807e58ff810b8fd26b7a4 # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Clone)
+[Pipeline] git
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/Jenkins_Task2_pipeline/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/ManoharSankar/Jenkins_Task2.git # timeout=10
+Fetching upstream changes from https://github.com/ManoharSankar/Jenkins_Task2.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.43.0'
+ > git fetch --tags --force --progress -- https://github.com/ManoharSankar/Jenkins_Task2.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 9643c4584f7d1a008f42a6bedf6c832fb4e2f7ef (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 9643c4584f7d1a008f42a6bedf6c832fb4e2f7ef # timeout=10
+ > git branch -a -v --no-abbrev # timeout=10
+ > git branch -D main # timeout=10
+ > git checkout -b main 9643c4584f7d1a008f42a6bedf6c832fb4e2f7ef # timeout=10
+Commit message: "Modified JenkinsFile"
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] sh
++ ./script.sh
+Hello world
+Welcome to Guvi Zen_Devops program
+Check the email for the jenkins pipeline job status
+Finally testing the job
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] emailext
+Sending email to: manoharsankar93@gmail.com
