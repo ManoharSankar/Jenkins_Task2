@@ -32,6 +32,7 @@ pipeline {
 
                 Please check the details in Jenkins.
                 """
+		attachLog: true
             )
         }
         failure {
@@ -51,23 +52,7 @@ pipeline {
 
                 Please check the details in Jenkins.
                 """
-            )
-        }
-        always {
-            emailext(
-                to: 'manoharsankar93@gmail.com',
-                subject: "Jenkins Build Result: ${currentBuild.fullDisplayName}",
-                body: """
-                The build has finished.
-
-                - **Build Number**: ${env.BUILD_NUMBER}
-                - **Build Status**: ${currentBuild.result}
-                - **Job Name**: ${env.JOB_NAME}
-                - **Build URL**: ${env.BUILD_URL}
-
-                Please check the build logs for more details.
-                """,
-                attachLog: true
+		attachLog: true
             )
         }
     }
